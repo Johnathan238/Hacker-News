@@ -4,16 +4,16 @@ const DefaultState = {
     errorMsg: ""
 }
 
-const HackerNewsReducer = (state = DefaultState, action) => {
+const NewsReducer = (state = DefaultState, action) => {
     switch (action.type) {
-        case "HACKERNEWS_LIST_LOADING":
+        case "NEWS_LIST_LOADING":
             return {
                 ...state,
                 loading: true,
                 errorMsg: ""
             }
 
-        case "HACKERNEWS_LIST_SUCCESS":
+        case "NEWS_LIST_SUCCESS":
             return {
                 ...state,
                 loading: false,
@@ -21,7 +21,7 @@ const HackerNewsReducer = (state = DefaultState, action) => {
                 errorMsg: ""
             }
 
-        case "HACKERNEWS_LIST_FAILED":
+        case "NEWS_LIST_FAILED":
             return {
                 ...state,
                 loading: false,
@@ -32,4 +32,4 @@ const HackerNewsReducer = (state = DefaultState, action) => {
     }
 }
 
-export default HackerNewsReducer
+export default NewsReducer

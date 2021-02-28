@@ -1,6 +1,6 @@
 import React from 'react'
 
-const HacknewsList = () => {
+const NewsList = () => {
     return (
         <div>
             <h1>WHATSNEW!!!</h1>
@@ -8,4 +8,4 @@ const HacknewsList = () => {
     );
 }
 
-export default HacknewsList
+export default NewsList

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Switch, Route, Redirect, NavLink } from 'react-router-dom'
-import HacknewsList from './containers/HacknewsList'
+import NewsList from './containers/NewsList'
 import './App.css';
 
 function App() {
@@ -10,8 +10,8 @@ function App() {
         <NavLink to={"/"}>Search</NavLink>
       </nav>
       <Switch>
-        <Route path={"/"} exact component={HacknewsList}/>
-        <Route path={"/hacknews/:hacknews"} exact component={HacknewsList}/>
+        <Route path={"/"} exact component={NewsList}/>
+        <Route path={"/news/:news"} exact component={NewsList}/>
         <Redirect to={"/"} />
       </Switch>
     </div>
