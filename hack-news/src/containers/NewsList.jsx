@@ -16,7 +16,9 @@ const NewsList = () => {
 
     const Showdata = () => {
         if(!_.isEmpty(state.data)) {
-            return <p>DATA!!</p>
+            return(
+                
+            ) 
         }
 
         if (state.loading) {
