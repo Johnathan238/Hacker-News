@@ -16,9 +16,11 @@ const NewsList = () => {
 
     const Showdata = () => {
         if(!_.isEmpty(state.data)) {
-            return(
-                
-            ) 
+            return state.data.map( list => {
+                return <div>
+                    <p>{list.hits}</p>
+                </div>
+            })
         }
 
         if (state.loading) {
