@@ -9,11 +9,13 @@ function App() {
       <nav>
         <NavLink to={"/"}>Search</NavLink>
       </nav>
+
       <Switch>
         <Route path={"/"} exact component={NewsList}/>
         <Route path={"/news/:news"} exact component={NewsList}/>
         <Redirect to={"/"} />
       </Switch>
+      
     </div>
   );
 }

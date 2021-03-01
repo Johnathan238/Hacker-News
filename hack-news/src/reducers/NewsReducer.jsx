@@ -2,7 +2,7 @@ const DefaultState = {
     loading: false,
     data: [],
     errorMsg: ""
-}
+};
 
 const NewsReducer = (state = DefaultState, action) => {
     switch (action.type) {
@@ -30,6 +30,6 @@ const NewsReducer = (state = DefaultState, action) => {
         default:
             return state
     }
-}
+};
 
 export default NewsReducer
