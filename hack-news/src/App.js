@@ -1,6 +1,7 @@
 import React from 'react'
 import { Switch, Route, Redirect, NavLink } from 'react-router-dom'
 import NewsList from './containers/NewsList'
+import News from './containers/News'
 import './App.css';
 
 function App() {
@@ -12,10 +13,10 @@ function App() {
 
       <Switch>
         <Route path={"/"} exact component={NewsList}/>
-        <Route path={"/news/:news"} exact component={NewsList}/>
+        <Route path={"/news/:news"} exact component={News}/>
         <Redirect to={"/"} />
       </Switch>
-      
+
     </div>
   );
 }

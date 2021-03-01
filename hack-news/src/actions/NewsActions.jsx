@@ -6,7 +6,7 @@ export const GetNewsList = () => async dispatch => {
             type: "NEWS_LIST_LOADING"
         });
         
-        const res = await axios.get(`http://hn.algolia.com/api/v1/search_by_date?query`)
+        const res = await axios.get(`http://hn.algolia.com/api/v1/search?tags=front_page`)
 
         dispatch({
             type: "NEWS_LIST_SUCCESS",
