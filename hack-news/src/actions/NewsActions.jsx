@@ -6,11 +6,12 @@ export const GetNewsList = () => async dispatch => {
             type: "NEWS_LIST_LOADING"
         });
         
-        const res = await axios.get(`http://hn.algolia.com/api/v1/search?tags=front_page`)
+        const perPage = 20;
+        const res = await axios.get(`https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty`)
 
         dispatch({
             type: "NEWS_LIST_SUCCESS",
-            payload: res.data.id
+            payload: res.data
         })
     } catch (e) {
         dispatch({

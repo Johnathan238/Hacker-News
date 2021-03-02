@@ -2,7 +2,7 @@ const DefaultState = {
     loading: false,
     data: [],
     errorMsg: "",
-    hits: 'id'
+    hits: '0'
 };
 
 const NewsReducer = (state = DefaultState, action) => {
@@ -18,9 +18,9 @@ const NewsReducer = (state = DefaultState, action) => {
             return {
                 ...state,
                 loading: false,
-                data: action.payload.id,
+                data: action.payload,
                 errorMsg: "",
-                hits: action.payload.id
+                hits: action.payload.hits
             }
 
         case "NEWS_LIST_FAILED":
