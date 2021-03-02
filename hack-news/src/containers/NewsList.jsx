@@ -18,7 +18,7 @@ const NewsList = () => {
         if(!_.isEmpty(state.data)) {
             return state.data.map( list => {
                 return <div>
-                    <p>{list.hits}</p>
+                    <p>{list.payload}</p>
                 </div>
             })
         }
