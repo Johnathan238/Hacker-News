@@ -10,7 +10,7 @@ export const GetNewsList = () => async dispatch => {
 
         dispatch({
             type: "NEWS_LIST_SUCCESS",
-            payload: res.data
+            payload: res.data.id
         })
     } catch (e) {
         dispatch({
