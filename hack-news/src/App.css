@@ -13,11 +13,13 @@ nav {
   height: 60px;
   align-items: center;
   justify-content: flex-end;
-  background-color: #FFD166;
+  background-color: #F3FFBD;
 }
 
 nav a {
   margin-right: 50px;
-  color: #06D6A0;
+  color: #FF1654;
   text-decoration: none;
 }
+
+
