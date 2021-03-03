@@ -1,4 +1,4 @@
-export const topNews = (state = [], action) => {
+export const topNewsReducer = (state = [], action) => {
     switch(action.type) {
         case "NEWS_LIST_LOADING":
 
