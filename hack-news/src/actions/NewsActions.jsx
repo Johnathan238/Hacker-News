@@ -11,11 +11,11 @@ export const GetNewsList = () => async dispatch => {
     dispatch({
         type: "NEWS_LIST_LOADING",
         payload: res.data.hits
-    })
+    });
 
 };
 
-export const search_API = () => async dispatch => {
+export const SearchNewsList = () => async dispatch => {
     const res = await search_API.get(`${query}`)
         
     dispatch({
@@ -26,8 +26,11 @@ export const search_API = () => async dispatch => {
     dispatch({
         type: "CLEAR_NEWS",
         payload: query
-    })
+    });
+
 };
+
+
 
 
     // try {
