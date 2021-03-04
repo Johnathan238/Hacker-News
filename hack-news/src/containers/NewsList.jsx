@@ -22,7 +22,20 @@ export default function TopNews () {
             </li>)
         })
     }
+
+    return (
+        <div>
+            {!news.length && <p>Waiting on Hacker News API...</p>}
+            {!results[0] && 
+                <div>
+                    <h3>Today's Top Stories</h3>
+                    <ul>{news && theTopNews()}</ul>
+                </div>
+            }
+        </div>
+    )
 }
+
 
 
 
