@@ -1,43 +1,29 @@
-import React from 'react';
-import {useDispatch, useSelector} from 'react-redux'
-import _ from "lodash"
-import {GetNewsList} from '../actions/NewsActions'
+import { useEffect } from 'react'
+import { useDispatch, useSelector} from 'react-redux'
+import { GetNewsList } from "../actions/NewsActions"
 
-const NewsList = () => {
+export default function TopNews () {
+    const news = useSelector( state => state.topNews )
+
+    const results = useSelector (state => state.results)
+
     const dispatch = useDispatch()
-    const state = useSelector(state => state.NewsList)
-    React.useEffect( () => {
-        FetchData()
-    }, [])
+    
+    useEffect(() => {
+        dispatch(GetNewsList(news))
+    },[])
 
-    const FetchData = () => {
-        dispatch (GetNewsList())
+    const theTopNews = () => {
+        return news.map(news =>{
+            return (<li> key={news.objectID}
+
+                <a href={news.url}> {news.title} </a>
+
+            </li>)
+        })
     }
-
-    const Showdata = () => {
-        if(!_.isEmpty(state.data)) {
-            return state.data.map( list => {
-                return <div>
-                    <p>{list.payload}</p>
-                </div>
-            })
-        }
-
-        if (state.loading) {
-            return <p>Loading ....</p>
-        }
-
-        if (state.errorMsg !== ""){
-            return <p>{state.errorMsg}</p>
-        }
-
-        return <p>IDK</p>
-    }
-    return (
-        <div>
-            {Showdata()}
-        </div>
-    );
 }
 
-export default NewsList
+
+
+
