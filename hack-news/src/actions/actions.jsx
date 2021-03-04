@@ -1,12 +1,15 @@
-import { TOP_STORIES_API } from '../../apis'
+import { TOP_NEWS_API } from '../API/API'
 
+export const topNewsQuery = () => async dispatch => {
+    const response = await TOP_NEWS_API.get('')
+    dispatch( 
+        {
+            
+        type: 'GET_TOP_STORIES', 
+        payload: response.data.hits 
 
-//axios
-export const topStoriesQuery = () => async dispatch => {
-  const response = await TOP_STORIES_API.get('')
-  dispatch( {type: 'GET_TOP_STORIES', payload: response.data.hits } )
+    } )
 }
-
 
 
 
