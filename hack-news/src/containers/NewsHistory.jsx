@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux'
-import { addToHistory, lastQuery } from '../actions/NewsActions'
+import { addToHistory, lastQuery } from '../actions/actions'
 
 export default function TheHistory () {
     const history = useSelector( state => state.history )

@@ -1,6 +1,6 @@
 import { useEffect } from 'react'
 import { useDispatch, useSelector} from 'react-redux'
-import { GetNewsList } from "../actions/NewsActions"
+import { GetNewsList } from "../actions/actions"
 
 export default function TopNews () {
     const news = useSelector( state => state.topNews )
