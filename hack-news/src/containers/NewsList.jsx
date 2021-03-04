@@ -28,7 +28,7 @@ export default function TopNews () {
             {!news.length && <p>Waiting on Hacker News API...</p>}
             {!results[0] && 
                 <div>
-                    <h3>Today's Top Stories</h3>
+                    <h3>Today's New's is</h3>
                     <ul>{news && theTopNews()}</ul>
                 </div>
             }

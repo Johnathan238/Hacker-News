@@ -30,6 +30,13 @@ export const SearchNewsList = () => async dispatch => {
 
 };
 
+//history
+export const addToHistory = query => {
+    return {
+        type: "ADD_TO_HISTORY",
+        payload: query
+    }
+};
 
 
 
