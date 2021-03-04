@@ -13,28 +13,31 @@ export default function TopNews () {
         dispatch(GetNewsList(news))
     }, [])
 
-    const theTopNews = () => {
+    const theNews = () => {
         return news.map(news =>{
-            return (<li> key={news.objectID}
+            return (<li key={news.objectID}>
 
                 <a href={news.url}> {news.title} </a>
+                <a>{results}</a>
 
             </li>)
         })
     }
 
+
     return (
         <div>
             {/* {!news.length && <p>Waiting on Hacker News API...</p>}
-            {!results[0] &&  */}
+            {fetch(results) &&  */}
                 <div>
                     <h3>Today's New's is</h3>
-                    <ul>{news && theTopNews()}</ul>
+                    <ul>{theNews}</ul>
                 </div>
-            
+
         </div>
     )
 }
+
 
 
 
