@@ -1,9 +1,9 @@
 import {combineReducers} from 'redux';
-import { NewsReducer } from './NewsReducer';
+import { topStoriesReducer } from './NewsReducer';
 import { HistoryReducer } from './NewsHistory'
 
 const RootReducer = combineReducers({
-    News: NewsReducer,
+    topStories: topStoriesReducer,
     History: HistoryReducer
 });
 

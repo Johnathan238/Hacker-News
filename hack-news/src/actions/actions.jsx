@@ -1,48 +1,12 @@
-import axios from  'axios';
-import { stories_API, search_API } from '../containers/API'
+import { TOP_STORIES_API } from '../../apis'
 
 
+//axios
+export const topStoriesQuery = () => async dispatch => {
+  const response = await TOP_STORIES_API.get('')
+  dispatch( {type: 'GET_TOP_STORIES', payload: response.data.hits } )
+}
 
-
-export const GetNewsList = () => async dispatch => {
-
-    const res = await stories_API.get('')
-        
-    dispatch({
-        type: "NEWS_LIST_LOADING",
-        payload: res.data.hits
-    });
-
-};
-
-export const SearchNewsList = query => async dispatch => {
-    const res = await search_API.get(`${query}`)
-        
-    dispatch({
-        type: "GOT_NEWS",
-        payload: res.data.hits
-        });
-
-    dispatch({
-        type: "CLEAR_NEWS",
-        payload: query
-    });
-};
-
-
-export const addToHistory = query => {
-    return {
-        type: "ADD_TO_HISTORY",
-        payload: query
-    }
-};
-
-export const lastQuery = query => {
-    return {
-        type: "SAVE_LAST_QUERY",
-        payload: query
-    }
-};
 
 
 
