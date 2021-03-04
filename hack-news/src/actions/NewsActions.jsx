@@ -15,7 +15,7 @@ export const GetNewsList = () => async dispatch => {
 
 };
 
-export const SearchNewsList = () => async dispatch => {
+export const SearchNewsList = query => async dispatch => {
     const res = await search_API.get(`${query}`)
         
     dispatch({
@@ -27,13 +27,19 @@ export const SearchNewsList = () => async dispatch => {
         type: "CLEAR_NEWS",
         payload: query
     });
-
 };
 
 
 export const addToHistory = query => {
     return {
         type: "ADD_TO_HISTORY",
+        payload: query
+    }
+};
+
+export const lastQuery = query => {
+    return {
+        type: "SAVE_LAST_QUERY",
         payload: query
     }
 };

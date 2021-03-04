@@ -11,7 +11,7 @@ export default function TopNews () {
     
     useEffect(() => {
         dispatch(GetNewsList(news))
-    },[])
+    }, [])
 
     const theTopNews = () => {
         return news.map(news =>{
@@ -25,13 +25,13 @@ export default function TopNews () {
 
     return (
         <div>
-            {!news.length && <p>Waiting on Hacker News API...</p>}
-            {!results[0] && 
+            {/* {!news.length && <p>Waiting on Hacker News API...</p>}
+            {!results[0] &&  */}
                 <div>
                     <h3>Today's New's is</h3>
                     <ul>{news && theTopNews()}</ul>
                 </div>
-            }
+            
         </div>
     )
 }

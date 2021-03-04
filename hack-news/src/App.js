@@ -11,11 +11,7 @@ function App() {
         <NavLink to={"/"}>Search</NavLink>
       </nav>
 
-      <Switch>
-        <Route path={"/"} exact component={NewsList}/>
-        <Route path={"/news/:news"} exact component={News}/>
-        <Redirect to={"/"} />
-      </Switch>
+      <NewsList />
 
     </div>
   );
