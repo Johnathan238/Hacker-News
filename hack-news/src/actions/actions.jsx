@@ -25,14 +25,6 @@ export const submitQuery = query => async dispatch => {
   } )
 }
 
-
-// export const lastQuery = query => {
-//   return {
-//     type: "SAVE_LAST_QUERY",
-//     payload: query
-//   }
-// }
-
 export const addToHistory = query => {
   return {
       type: "ADD_TO_HISTORY",
@@ -53,12 +45,3 @@ export const clearResults = () => {
     }
 }
 
-
-
-
-// export const clearQuery = query => {
-//   return {
-//     type: "CLEAR_QUERY",
-//     payload: query
-//   }
-// }
