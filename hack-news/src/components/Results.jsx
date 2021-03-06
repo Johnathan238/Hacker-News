@@ -11,8 +11,8 @@ export default function Results () {
             return (
             <li key={parseInt(results.objectID)} className="results">
 
-                <a href={results.url}>{results.title}</a>
-                
+                <a href={results.url} target="_blank">{results.title}</a>
+
             </li>) 
         })
     }

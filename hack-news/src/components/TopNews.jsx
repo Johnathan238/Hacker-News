@@ -17,7 +17,7 @@ export default function TopNews() {
         return news.map(news => {
             return (
             <li key={news.objectID} className="App-li">
-                <a  href={news.url}>{news.title}</a>
+                <a  href={news.url} target="_blank">{news.title}</a>
             </li>)
         })
     }
