@@ -16,10 +16,9 @@ nav {
   background-color: #F3FFBD;
 }
 
-nav a {
-  margin-right: 50px;
-  color: #FF1654;
+li{
   text-decoration: none;
 }
+
 
 
