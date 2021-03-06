@@ -13,7 +13,7 @@ export default function History () {
 
     const renderHistory = () => {
         return history.map(history => {
-            return (<li key={history} className="history-li">
+            return (<li key={history} className="history-list">
 
                 <button onClick={()=>handleQuery(history)} className="history">
                     {history}
@@ -40,7 +40,7 @@ export default function History () {
                         Clear History
                     </button>
                 </div>
-                
+
             }
         </div>
     )
