@@ -19,7 +19,6 @@ export default function History () {
                     {history}
                 </button>
 
-                <button className="History-delete" onClick={()=>dispatch((history))}>❌</button>
             </li>
             )
         })
